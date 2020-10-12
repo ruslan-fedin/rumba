@@ -6,6 +6,7 @@ class Person {
     {
 
         $method = "get{$property}";
+		
         if (method_exists($this,$method)){
             return $this->$method();
         }
@@ -14,7 +15,7 @@ class Person {
 
     public function getName() :string
     {
-        return "Иван";
+        return  "Иван";
 
     }
 
@@ -39,4 +40,6 @@ if (isset($p->name)) {
 }
 $p = new Person();
 
+
 print $p->name;
+
